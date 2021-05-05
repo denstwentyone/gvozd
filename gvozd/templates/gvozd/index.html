@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гвоздь</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="conteiner">
+            <div class="header_inner">
+                <a class="logo" href="#tab_main">ГВОЗДЬ</a>
+
+                <div class="tabs">
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a class="nav_link" href="#tab_01">УСЛЛУГИ</a>
+                                <ul class="sub_menu">
+                                    <li>
+                                        <a class="nav_link_sub" href="views/zbtgvzd.html">ЗАБИТЬ ГВОЗДЬ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/pvrtdr.html">ПРОСВЕРЛИТЬ ДЫРУ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/rzbtkn.html">РАЗБИТЬ ОКНО</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/pmntlp.html">ПОМЕНЯТЬ ЛАМПОЧКУ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/prstnvtwd.html">ПЕРЕУСТАНОВИТЬ SHINDOWS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="#tab_02">ИНФОРМАЦИЯ</a>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="#tab_03">КОНТАКТЫ</a>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="/жаба/views/signin.html">ЗАКАЗАТЬ услугу</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dialog">
+        <p>У вас выключена функция local storage</p>
+        <button id="closeDialog">Закрыть</button>
+    </div>
+    <main class="main">
+        <h2>{{ hello }}</h2>
+        <div class="conteiner">
+            <div class="tabs_body">
+                <div id="tab_main" class="tabs_block">
+
+                    <div class="column">
+                        <a class="headcaption" >РЕМОНТНО-СТРОИТЕЛЬНАЯ КОМПАНИЯ ГВОЗДЬ</a>
+                        <div class="slider">
+                            <div class="slide" id="slide_01">
+                                <img src="{% static 'gvozd/img/left.png' %}" class="arrow" id="arrow_01_left">
+                                <img src="{% static 'gvozd/img/slide_01.jpg' %}" alt="" class="img2">
+                                <img src="{% static 'gvozd/img/right.png' %}" class="arrow" id="arrow_01_right">
+                            </div>
+                            <div class="slide" id="slide_02">
+                                <img class="arrow" id="arrow_02_left" src="{% static 'usercheck/img/left.png' %}">
+                                <img src="/жаба/slide_02.jpg" alt="" class="img2">
+                                <img src="/жаба/right.png" class="arrow" id="arrow_02_right">
+                            </div>
+                            <div class="slide" id="slide_03">
+                                <img src="/жаба/left.png" class="arrow" id="arrow_03_left">
+                                <img src="/жаба/slide_03.jpg" alt="" class="img2">
+                                <img src="/жаба/right.png" class="arrow" id="arrow_03_right">
+                            </div>
+                            <div class="indicator">
+                                  <img src="/жаба/1iz3.png" alt="" id="indicator">
+                            </div>
+                        </div>
+                        <p class="text">Мы предлагаем полный комплекс услуг с собственными специалистами в сфере ремонта и строительства.</p>
+                        <p class="text">Сотрудники нашей компании имеют высокий уровень подготовки и большой опыт работы, благодаря чему мы готовы выполнять заказы любой сложности с соблюдением сроков сдачи объектов. Мы дорожим своей репутацией и ценим каждого своего клиента, предлагая выгодные условия при наивысшем качестве всех работ. Мы выполняем не только строительные работы любой сложности и любого назначения, но и отделочные работы, капитальный и косметический ремонт домов, квартир и нежилых помещений.</p>
+                        <p class="text">Наши услуги:</p>
+                        <table class="table">
+                            <tr class="lines"><th class="colls">Услуга</th><th class="colls">Цена</th></tr>
+                            <tr class="lines"><td class="colls">ЗАБИТЬ ГВОЗДЬ</td><td class="colls">5 грн</td></tr>
+                            <tr class="lines"><td class="colls">ПРОСВЕРЛИТЬ ДЫРУ</td><td class="colls">20 грн</td></tr>
+                            <tr class="lines"><td class="colls">РАЗБИТЬ ОКНО</td><td class="colls">100 грн</td></tr>
+                            <tr class="lines"><td class="colls">ПОМЕНЯТЬ ЛАМПОЧКУ</td class="colls"><td>50 грн</td></tr>
+                            <tr class="lines"><td class="colls">ПЕРЕУСТАНОВИТЬ SHINDOWS</td><td class="colls">150 грн</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="tab_01" class="tabs_block">
+                    <div class="categories">
+                        <a class="caption2">Категория:</a>
+                        <select name="" id="categories">
+                            <option value="0"> </option>
+                            <option value="1">СТРОИТЕЛЬНЫЕ РАБОТЫ</option>
+                            <option value="2">РЕМОНТНЫЕ РАБОТЫ</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <a class="caption2">Поиск:</a>
+                        <input type="text" id="filter">
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="myimg.jpg" class="img">
+                        </div>
+                        <div class="column">
+                            <a class="caption"  href="views/zbtgvzd.html">ЗАБИТЬ ГВОЗДЬ</a>
+                            <a class="text">5 грн/шт</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="drel.jpg" class="img">
+                        </div>
+                        <div class="column">
+                            <a class="caption"  href="views/pvrtdr.html">ПРОСВЕРЛИТЬ ДЫРУ</a>
+                            <p1 class="text">20 грн</p1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="window.jpg" class="img">
+                        </div>
+                        <div class="column">
+                            <a class="caption" href="views/rzbtkn.html">РАЗБИТЬ ОКНО</a>
+                            <p1 class="text">100 грн</p1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="lamp.jpg" class="img">
+                        </div>
+                        <div class="column">
+                            <a class="caption"  href="views/pmntlp.html">ПОМЕНЯТЬ ЛАМПОЧКУ</a>
+                            <p1 class="text">50 грн</p1>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="windows.jpg" class="img">
+                        </div>
+                        <div class="column">
+                            <a class="caption"  href="views/prstnvtwd.html">ПЕРЕУСТАНОВИТЬ SHINDOWS</a>
+                            <p1 class="text">150 грн (новая услуга)</p1>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab_02" class="tabs_block">
+                    <div class="column">
+                        <h1 class="caption2">Наше местоположение</h1>
+                        <div id="map"></div>
+                    </div>
+
+                </div>
+                <div id="tab_03" class="tabs_block">
+                    <div class="column">
+                        <a class="caption" href="https://nure.ua/">Наши контакты</a>
+                        <a class="text">Телефон горячей линии: 8 800 555 35 35</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_inner">
+            <p class="text2">Телефон горячей линии: 8 800 555 35 35</p>
+            <p class="text2">Адрес: проспект Науки, 14</p>
+        </div>
+    </footer>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = { lat: 50.0150803, lng: 36.2279494 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 18.25, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+    </script>
+    <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+    <script src="/жаба/index.js"></script>
+    <script src="/жаба/filter.js"></script>
+</body>
+
+</html>
