@@ -6,7 +6,10 @@ html, body
     background-color: #ebebeb;
     background-size: 100%;
 }
-
+#hello{
+    text-align:center;
+    color:black;
+}
 .conteiner
 {
     width: 100%;
