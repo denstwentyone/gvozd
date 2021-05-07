@@ -18,5 +18,5 @@ from . import views
 
 urlpatterns = [
     path('', views.main),
-    path('/<str:name>', views.user_check),
+    path('<str:name>', views.user_check),
 ]
