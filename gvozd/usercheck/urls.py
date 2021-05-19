@@ -18,5 +18,6 @@ from . import views
 
 urlpatterns = [
     path('', views.main),
+    path('main',views.main),
     path('<str:name>', views.user_check),
 ]

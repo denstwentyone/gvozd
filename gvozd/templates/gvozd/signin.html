@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'gvozd/css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <header class="header">
+            <div class="conteiner">
+                <div class="header_inner">
+                    <a class="logo" href="">ГВОЗДЬ</a>
+
+                    <div class="tabs">
+                        <nav class="nav">
+                            <ul class="menu">
+                                <li>
+                                    <a class="nav_link" href="views/index.html#tab_01">УСЛЛУГИ</a>
+                                    <ul class="sub_menu">
+                                        <li>
+                                            <a class="nav_link_sub" href="zbtgvzd.html">ЗАБИТЬ ГВОЗДЬ</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav_link_sub" href="pvrtdr.html">ПРОСВЕРЛИТЬ ДЫРУ</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav_link_sub" href="rzbtkn.html">РАЗБИТЬ ОКНО</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav_link_sub" href="pmntlp.html">ПОМЕНЯТЬ ЛАМПОЧКУ</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav_link_sub" href="prstnvtwd.html">ПЕРЕУСТАНОВИТЬ SHINDOWS</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="nav_link" href="/жаба/index.html#tab_02">ИНФОРМАЦИЯ</a>
+                                </li>
+                                <li>
+                                    <a class="nav_link" href="/жаба/index.html#tab_03">КОНТАКТЫ</a>
+                                </li>
+                                <li>
+                                    <a class="nav_link" href="">ЗАКАЗАТЬ услугу</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </header>
+    <main class="main">
+        <div class="conteiner">
+            <div class="content2">
+                <div class="column2">
+                    <a class="caption2">Заказать услугу</a>
+                    <a class="text">Обязательные поля помечены знаком *</a>
+                    <div class="block">
+                        <a class="text" id="name_text">Имя</a>
+                        <input type="text" class="input" id="name">*
+                    </div>
+                    <p class="err" id="err1">Введите имя</p>
+                    <div class="block">
+                        <a class="text" id="email_text">E-mail</a>
+                        <input type="text" class="input" id="e-mail">*
+                    </div>
+                    <p class="err" id="err2">Введите e-mail</p>
+                    <div class="block">
+                        <a class="text" id="pass_text">Услуга</a>
+                        <select name="" id="pass" class="input">
+                            <option value="0"> </option>
+                            <option value="1">ЗАБИТЬ ГВОЗДЬ</option>
+                            <option value="2">ПРОСВЕРЛИТЬ ДЫРУ</option>
+                            <option value="3">РАЗБИТЬ ОКНО</option>
+                            <option value="4">ПОМЕНЯТЬ ЛАМПОЧКУ</option>
+                            <option value="5">ПЕРЕУСТАНОВИТЬ SHINDOWS</option>
+                        </select>*
+                    </div>
+                    <p class="err" id="err3">Выбирите услугу</p>
+                    <div>
+                        <button class="button" id="button">Зарегистрироватся</button>
+                        <button class="button" id="button2">Зачистить</button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal">
+        <div class="modal_content">
+            <span class="close_btn">&times;</span>
+            <p class="caption2">Регистрация прошла успешно</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_inner">
+            <p class="text2">Телефон горячей линии: 8 800 555 35 35</p>
+            <p class="text2">Адрес: проспект Науки, 14</p>
+        </div>
+    </footer>
+    <script src="{% static 'gvozd/js/signin.js' %}"></script>
+</body>
+
+</html>
