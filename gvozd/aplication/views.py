@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.shortcuts import render
 
-# Create your views here.
+
+def makeorder(request):
+    return render(request, 'gvozd/signin.html')

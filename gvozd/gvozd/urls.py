@@ -22,5 +22,5 @@ urlpatterns = [
     path('', views.index),
     path('main',views.index),
     path('user/', include('usercheck.urls')),
-    path('order/',include('order.urls')),
+    path('aplication/',include('aplication.urls')),
 ]
