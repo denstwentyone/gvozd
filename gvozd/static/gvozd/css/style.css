@@ -3,7 +3,7 @@ html, body
     height: 92%;
     color: white;
     /*background-image: url(background.jpg);*/
-    background-color: #ebebeb;
+    background-color: black;
     background-size: 100%;
 }
 #hello{
@@ -41,9 +41,11 @@ html, body
 
 .footer
 {
+    position:relative;
     margin-top: 25px;
     margin-bottom: 5px;
-    top: 0;
+    bottom: 10%;
+    top: 60%;
     left: 0;
     right: 0;
     z-index: 10;

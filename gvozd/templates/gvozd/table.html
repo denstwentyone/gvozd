@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'gvozd/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Все заказы</title>
+</head>
+<br><br><br><br><br><br><br><br>
+<body>
+    <header class="header">
+        <div class="conteiner">
+            <div class="header_inner">
+                <a class="logo" href="#tab_main">ГВОЗДЬ</a>
+                <div class="tabs">
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a class="nav_link" href="#tab_01">УСЛЛУГИ</a>
+                                <ul class="sub_menu">
+                                    <li>
+                                        <a class="nav_link_sub" href="views/zbtgvzd.html">ЗАБИТЬ ГВОЗДЬ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/pvrtdr.html">ПРОСВЕРЛИТЬ ДЫРУ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/rzbtkn.html">РАЗБИТЬ ОКНО</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/pmntlp.html">ПОМЕНЯТЬ ЛАМПОЧКУ</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav_link_sub" href="views/prstnvtwd.html">ПЕРЕУСТАНОВИТЬ SHINDOWS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="#tab_02">ИНФОРМАЦИЯ</a>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="#tab_03">КОНТАКТЫ</a>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="aplication">ЗАКАЗАТЬ услугу</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<body>
+<h1 align="center">Страница заказов</h1>
+<br>
+	<table align="center"  border="1" width="50%">
+		<thead>
+			<tr>
+				<th>id</th>
+                <th>Дата</th>
+				<th>Имя</th>
+				<th>Почта</th>
+				<th>Услуга</th>
+			</tr>
+		</thead>
+		<tbody>
+	{% for f in applications %}
+		<tr>
+        	<td>{{ f.id }}</td>
+            <td>{{ f.date }}</td>
+        	<td>{{ f.first_name }}</td>
+        	<td>{{ f.email }}</td>
+			<td>{{ f.favour.name }}</td>
+    	</tr>
+	{% endfor %}
+	</table>
+</body>
+
+</html>

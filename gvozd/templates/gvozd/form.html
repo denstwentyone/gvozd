@@ -1,0 +1,57 @@
+
+{% block title %} Заявление на поступление {% endblock %}
+
+{% block content %}
+{% load static %}
+<p class="center_text"> Электронное заявление на поступление</p>
+
+<p>Заполните форму ниже от имени ребёнка до 15.07.2021. Дату прохождения тестирования для поступления в школу администрация объявит 21.07.2021. </p>
+<p>Необязательные поля помечены (Н).</p>
+<br>
+<form  id="form" method="post" action= "{% url 'form' %}">
+	<div>
+		<label id="name">Имя:  <input type="text" name="studentName"  id="studentName" required></label>
+
+	</div>
+	<div>
+		<label id="surname">Фамилия:  <input type="text" name="studentSurname" id="studentSurname" required></label>
+	</div>
+	<div>
+		<label id="fname">Отчество:  <input type="text" name="studentFathersName" id="studentFathersName" required></label>
+	</div>
+	<div>
+		<label id="address">Адрес:  <input type="text" name="studentAddress" id="studentAddress" required></label>
+	</div>
+	<div>
+		<label id="date">Дата рождения:  <input type="date" name="studentDate" id="studentDate" required></label>
+	</div>
+	<div>
+		<label id="phone">Телефон (Н):  <input type="tel" name="studentPhone" id="studentPhone" placeholder="380" required /></label>
+	</div>
+	<div>
+		<label id="email">Email:  <input type="email" name="studentEmail" id="studentEmail"></label>
+	</div>
+	<div>
+		<p>Класс, в который поступаете: </p>
+		<select id="grades" name="grades" required>
+			<option value="1"> 1 </option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3 </option>
+			<option value="4"> 4 </option>
+			<option value="5"> 5 </option>
+			<option value="6"> 6 </option>
+			<option value="7"> 7 </option>
+			<option value="8"> 8 </option>
+			<option value="9"> 9 </option>
+			<option value="10"> 10 </option>
+			<option value="11"> 11 </option>
+
+		</select>
+	</div>
+	<br>
+	<div>
+		<input type="submit" name="submit" id="submit" value="Отправить" onclick="valid(document.getElementById('form'))"/>
+		<button name = "reset" id = "reset" type="reset">Очистить всё</button>
+	</div>
+</form>
+{% endblock %}
