@@ -3,7 +3,7 @@ html, body
     height: 92%;
     color: white;
     /*background-image: url(background.jpg);*/
-    background-color: black;
+    background-color: white;
     background-size: 100%;
 }
 #hello{
@@ -395,4 +395,14 @@ html, body
 { 
     border: 2px solid;
     border-color:  #06ddf6;
+}
+#form_feedback
+{
+    margin: 10px 20px 30px 40px;
+    left:100px;
+    width: 1600px;
+    height: 600px;
+    background-color: aqua;
+    padding:40px;
+
 }

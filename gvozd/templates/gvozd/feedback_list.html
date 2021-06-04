@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% load static %}
+<DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<main>
 
 <body>
 <header>
@@ -44,10 +45,16 @@
                                 <a class="nav_link" href="/жаба/index.html#tab_02">ИНФОРМАЦИЯ</a>
                             </li>
                             <li>
-                                <a class="nav_link" href="showorders">Показать заказы</a>
+                                <a class="nav_link" href="http://127.0.0.1:8000/aplication/showorders">Показать заказы</a>
                             </li>
                             <li>
                                 <a class="nav_link" href="">ЗАКАЗАТЬ услугу</a>
+                            </li>
+                            <li>
+                                <a class="nav_link" href="">Добавить отзыв</a>
+                            </li>
+                             <li>
+                                <a class="nav_link" href="">Наши отзывы</a>
                             </li>
                         </ul>
                     </nav>
@@ -57,38 +64,12 @@
     </header>
 </header>
 <br><br><br><br><br><br>
-    <h1 align="center">Сделать заказ</h1>
-    <br>
-    <form  id="form" method="post" action ="">
-        {% csrf_token %}
-        <div>
-            <label><input type="text" name="first_name" id="first_name" required></label>
-        </div>
-        <div>
-            <label>Дата заявки:<input type="date" name="date" id="date" required></label>
-        </div>
-        <div>
-            <label>Email:<input type="email" name="email" id="email" required></label>
-        </div>
-        <p>Выбирите услугу:</p>
-        <select id="favour_id" name="favour_id" required>
-			<option value="Забить гвоздь"> Забить гвоздь </option>
-			<option value=50> Сделать ремонт </option>
-			<option value=49> Поменять лампочку </option>
-		</select>
-        <br>
-        <div>
-            <input type="submit" value="Отправить">
-            <button name = "reset" id = "reset" type="reset">Очистить всё</button>
-        </div>
-    </form>
-<footer class="footer">
-    <div class="footer_inner">
-        <p class="text2">Телефон горячей линии: 8 800 555 35 35</p>
-        <p class="text2">Адрес: проспект Науки, 14</p>
+<h1 align="center">Лента отзывов</h1>
+<div id="form_feedback">
+    {% for m in messages %}
+    <div class="alert alert-warning mt-2">
+        <h3>Пользователь {{m.username}}</h3>
+        <h3> {{m.text}} </h3>
     </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+    {% endfor %}
+</div>

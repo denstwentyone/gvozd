@@ -17,12 +17,13 @@ def getform(request):
     if request.method == 'GET':
         return render(request, 'gvozd/signin.html')
     if request.method == 'POST':
-        fid = request.POST["favour_id"]
-        favour = Favour.objects.filter(pk=fid)
+        fname = request.POST["favour_name"]
+        new_favour = Favour(name=fname)
+        new_favour.save()
         ffirst_name = request.POST["first_name"]
         fdate = request.POST["date"]
         femail = request.POST["email"]
-        new_application = Aplications(favour=favour[0],first_name = ffirst_name, email =femail, date = fdate)
+        new_application = Aplications(favour=new_favour,first_name = ffirst_name, email =femail, date = fdate)
         new_application.save()
         return render(request, 'gvozd/signin.html')
 
