@@ -14,7 +14,7 @@ class Favour(models.Model):
 
 class Aplications(models.Model):
     first_name = models.CharField(verbose_name='Имя', max_length=50)
-    email = models.EmailField(verbose_name='email', unique=True, )
+    email = models.EmailField(verbose_name='email', unique=True)
     date = models.DateTimeField(verbose_name='Дата заяки', auto_now_add=True)
     favour = models.ForeignKey(Favour, on_delete=models.PROTECT, verbose_name='Название услуги, цена')
 

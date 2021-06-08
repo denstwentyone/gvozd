@@ -1,8 +1,13 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 from .form import MakeMassage
 from .models import Message
 from django.views.decorators.csrf import csrf_exempt
+
+from django.contrib.auth.decorators import login_required
+
 
 
 def show(request):
@@ -15,10 +20,14 @@ def forum(request):
         form = MakeMassage(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('http://127.0.0.1:8000/feedback/show')
+            return HttpResponseRedirect('show/1')
     form = MakeMassage()
     context = {
         'form': form,
     }
     return render(request, 'gvozd/feedback.html', context)
 
+
+def favour_id(request, favour_id = 0):
+    messages = Message.objects.filter(favour_id=favour_id).order_by('id')
+    return render(request, 'gvozd/feedback_list.html', {'messages': messages})

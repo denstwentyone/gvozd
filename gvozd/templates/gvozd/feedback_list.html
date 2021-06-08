@@ -69,7 +69,10 @@
     {% for m in messages %}
     <div class="alert alert-warning mt-2">
         <h3>Пользователь {{m.username}}</h3>
+        <h3> {{m.favour}}</h3>
+        _______________________
         <h3> {{m.text}} </h3>
     </div>
     {% endfor %}
+
 </div>

@@ -79,14 +79,16 @@
     <form method="post">
         {% csrf_token %}
             Ваш ник:<br>
-        {{ form.username }}
+        {{ form.username }}<br>
+            Выбирите услугу:<br>
+        {{form.favour }}
         <br>
         Ваш отзыв: <br>
         {{ form.text }}
         <br><br>
          <input type="submit" value="Отправить">
          <button name = "reset" id = "reset" type="reset">Очистить всё</button>
-        <span>{{error}}</span>
+
     </form>
 </div>
 
