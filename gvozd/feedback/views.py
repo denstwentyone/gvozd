@@ -7,6 +7,7 @@ from .models import Message
 from django.views.decorators.csrf import csrf_exempt
 
 from django.contrib.auth.decorators import login_required
+from django.urls import path
 
 
 
@@ -18,9 +19,10 @@ def show(request):
 def forum(request):
     if request.method == 'POST':
         form = MakeMassage(request.POST)
+        favour_id = form.data['favour']
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('show/1')
+            return HttpResponseRedirect('show/' + favour_id)
     form = MakeMassage()
     context = {
         'form': form,
