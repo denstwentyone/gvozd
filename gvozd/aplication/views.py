@@ -17,7 +17,7 @@ def getform(request):
     if request.method == 'GET':
         return render(request, 'gvozd/signin.html')
     if request.method == 'POST':
-        fname = request.POST["favour_name"]
+        fname = request.POST["favour_id"]
         new_favour = Favour(name=fname)
         new_favour.save()
         ffirst_name = request.POST["first_name"]
